@@ -1,0 +1,8212 @@
+{
+  "x-generator": "NSwag v13.11.3.0 (NJsonSchema v10.4.4.0 (Newtonsoft.Json v12.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "Mobile v2",
+    "version": "1.0.0"
+  },
+  "host": "localhost:52191",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/mobile/account/v2/registration": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_PreRegistration",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TempRegistrationDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/limit": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_SetUserLimit",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserLimit"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_GetUserLimit",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/registration/complete": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_RegistrationV2",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RegistrationWithPlatformDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/registration/continue/complete": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_ContinueRegistration",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RegistrationDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/update-wallets": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_UpdateWallets",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "x-dictionaryKey": {
+                "$ref": "#/definitions/CoinType"
+              },
+              "additionalProperties": {
+                "$ref": "#/definitions/WalletDTO"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/add-wallet": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_AddWallet",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WalletDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/wallet-types": {
+      "get": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_GetWalletTypes",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/wallets/{type}": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "summary": "should be removed and sync with mobile app",
+        "operationId": "Account_UpdateWallet",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-schema": {
+              "$ref": "#/definitions/CoinType"
+            },
+            "x-nullable": false,
+            "enum": [
+              10,
+              20,
+              30,
+              40
+            ]
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WalletDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/walletaddress/{type}": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_AddWalletAddress",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "x-schema": {
+              "$ref": "#/definitions/CoinType"
+            },
+            "x-nullable": false,
+            "enum": [
+              10,
+              20,
+              30,
+              40
+            ]
+          },
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WalletDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/code": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_ResendCode",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/code/confirm": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_ConfirmCode",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ConfirmationDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/status": {
+      "get": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_GetStatus",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/id-picture": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_SaveUserIdPicture",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserIdPictureDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/countdown/info": {
+      "get": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_GetStatusByPhoneNumber",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "phoneNumber",
+            "in": "query",
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AccountInfoDTO"
+            }
+          },
+          "400": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorDetails"
+            }
+          },
+          "404": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorDetails"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/push-notify": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_SetPushNotifyToken",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "token",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/exist/email": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_DoesEmailExist",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DoesEmailExistDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/GetUserProfileDetails": {
+      "get": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_GetUserProfileDetails",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "phone",
+            "in": "query",
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/exist/phonenumber": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_DoesPhoneNumberExistV2",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DoesPhoneNumberExistDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/exist/public-key": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_DoesAccountExistWithPublicKey",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DoesPublicKeyExistDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          "400": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ErrorDetails"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/recover": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_RecoverV2",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RecoverWithPlatformDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/recover/complete": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_CompleteRecover",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "oldModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RecoverDTODeprecated"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/logout": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_LogoutFromMobileApp",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/exist/phonenumbers": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_ExistsByPhoneNumbers",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "phoneNumbers",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/update-phonenumber": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_UpdateUserPhoneNumber",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PhoneNumberUpdateDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/update-phonenumber/resend": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_ResendUpdateUserPhoneNumberCode",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/update-phonenumber/confirm": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_ConfirmUpdatePhoneNumberCode",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ConfirmationDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/update-email": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_UpdateUserEmail",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/EmailUpdateDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/update-email/confirm": {
+      "put": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_ConfirmUpdateEmailCode",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ConfirmationDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/verify-email": {
+      "get": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_GetVerifyEmailStatus",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_VerifyUserEmail",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/verify-email/confirm": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_ConfirmEmailVerificationCode",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ConfirmationDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/permission/invite": {
+      "get": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_GetPermissionStatusInvitate",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/platform": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_UpdatePlatformInfo",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PlatformDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/contact-visibility": {
+      "post": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_UpdateContactVisibility",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ContactVisibilityDTO"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/account/v2/details": {
+      "get": {
+        "tags": [
+          "Mobile/Account"
+        ],
+        "operationId": "Account_GetUserDetails",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/outbound-transfers/v2/requirements": {
+      "post": {
+        "tags": [
+          "Mobile/OutboundTransfer"
+        ],
+        "operationId": "OutboundTransfer_GetAllBankingRequirements",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "destination",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Destination"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/outbound-transfers/v2/beneficiaries": {
+      "get": {
+        "tags": [
+          "Mobile/OutboundTransfer"
+        ],
+        "operationId": "OutboundTransfer_GetBeneficiaries",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Mobile/OutboundTransfer"
+        ],
+        "operationId": "OutboundTransfer_CreateBeneficiary",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "beneficiary",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BeneficiaryDetails"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/outbound-transfers/v2/beneficiaries/{id}": {
+      "put": {
+        "tags": [
+          "Mobile/OutboundTransfer"
+        ],
+        "operationId": "OutboundTransfer_UpdateBeneficiary",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "format": "int64",
+            "x-nullable": false
+          },
+          {
+            "name": "beneficiary",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BeneficiaryDetails"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Mobile/OutboundTransfer"
+        ],
+        "operationId": "OutboundTransfer_DeleteBeneficiary",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "format": "int64",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/outbound-transfers/v2/countries": {
+      "get": {
+        "tags": [
+          "Mobile/OutboundTransfer"
+        ],
+        "operationId": "OutboundTransfer_GetPaymentCountries",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/outbound-transfers/v2/quote": {
+      "post": {
+        "tags": [
+          "Mobile/OutboundTransfer"
+        ],
+        "operationId": "OutboundTransfer_GetTransferQuote",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TransferRequest"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/outbound-transfers/v2": {
+      "get": {
+        "tags": [
+          "Mobile/OutboundTransfer"
+        ],
+        "operationId": "OutboundTransfer_GetTransfers",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Mobile/OutboundTransfer"
+        ],
+        "operationId": "OutboundTransfer_CreateTransfer",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "transfer",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/NewTransfer"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/outbound-transfers/v2/count": {
+      "get": {
+        "tags": [
+          "Mobile/OutboundTransfer"
+        ],
+        "operationId": "OutboundTransfer_GetTransfersCount",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/outbound-transfers/v2/tx/{id}": {
+      "get": {
+        "tags": [
+          "Mobile/OutboundTransfer"
+        ],
+        "operationId": "OutboundTransfer_GetTransferByTxId",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/outbound-transfers/v2/{id}": {
+      "get": {
+        "tags": [
+          "Mobile/OutboundTransfer"
+        ],
+        "operationId": "OutboundTransfer_GetTransfer",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "format": "int64",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/transactions/v2": {
+      "get": {
+        "tags": [
+          "Mobile/Transactions"
+        ],
+        "operationId": "Transactions_GetTransactionsV2",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "currency",
+            "in": "query",
+            "x-schema": {
+              "$ref": "#/definitions/CoinType"
+            },
+            "x-nullable": false,
+            "enum": [
+              10,
+              20,
+              30,
+              40
+            ]
+          },
+          {
+            "type": "integer",
+            "name": "offset",
+            "in": "query",
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "step",
+            "in": "query",
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/transactions/v2/{id}": {
+      "get": {
+        "tags": [
+          "Mobile/Transactions"
+        ],
+        "operationId": "Transactions_GetTransaction",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    },
+    "/api/mobile/transactions/v2/kfee": {
+      "get": {
+        "tags": [
+          "Mobile/Transactions"
+        ],
+        "operationId": "Transactions_GetKFee",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        },
+        "security": [
+          {
+            "JWT": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "TempRegistrationDTO": {
+      "type": "object",
+      "required": [
+        "phoneNumber"
+      ],
+      "properties": {
+        "phoneNumber": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "UserLimit": {
+      "type": "object",
+      "required": [
+        "amountInUsd",
+        "isEnable"
+      ],
+      "properties": {
+        "amountInUsd": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "isEnable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "RegistrationWithPlatformDTO": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/RegistrationDTO"
+        },
+        {
+          "type": "object",
+          "required": [
+            "platform",
+            "platformVersion",
+            "appVersion"
+          ],
+          "properties": {
+            "platform": {
+              "$ref": "#/definitions/PlatformType"
+            },
+            "platformVersion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "appVersion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "deviceModel": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "PlatformType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Android",
+        "iOS"
+      ],
+      "enum": [
+        10,
+        20
+      ]
+    },
+    "RegistrationDTO": {
+      "type": "object",
+      "required": [
+        "firstName",
+        "lastName",
+        "phoneNumber",
+        "dateOfBirth",
+        "location",
+        "document",
+        "deviceId"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z]+((['` -][a-zA-Z ])?[a-zA-Z]*)*$"
+        },
+        "lastName": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z]+((['` -][a-zA-Z ])?[a-zA-Z]*)*$"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "pattern": "^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
+        },
+        "phoneNumber": {
+          "type": "string",
+          "minLength": 1
+        },
+        "wallet": {
+          "type": "object",
+          "x-dictionaryKey": {
+            "$ref": "#/definitions/CoinType"
+          },
+          "additionalProperties": {
+            "$ref": "#/definitions/WalletDTO"
+          }
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "format": "date-time",
+          "minLength": 1
+        },
+        "location": {
+          "$ref": "#/definitions/LocationDTO"
+        },
+        "document": {
+          "$ref": "#/definitions/DocumentDTO"
+        },
+        "deviceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "secure": {
+          "$ref": "#/definitions/SecureDataDTO"
+        },
+        "referralCode": {
+          "type": "string"
+        }
+      }
+    },
+    "CoinType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Dash",
+        "USDk",
+        "KuvaCoin",
+        "Btc"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40
+      ]
+    },
+    "WalletDTO": {
+      "type": "object",
+      "required": [
+        "type",
+        "walletId",
+        "copayerId",
+        "address"
+      ],
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/CoinType"
+        },
+        "walletId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "copayerId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "address": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "LocationDTO": {
+      "type": "object",
+      "required": [
+        "country",
+        "city",
+        "address"
+      ],
+      "properties": {
+        "country": {
+          "type": "string",
+          "minLength": 1
+        },
+        "city": {
+          "type": "string",
+          "minLength": 1
+        },
+        "address": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9 .,-]+$"
+        }
+      }
+    },
+    "DocumentDTO": {
+      "type": "object",
+      "required": [
+        "type",
+        "idNumber"
+      ],
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/DocumentType"
+        },
+        "idNumber": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9 -]+$"
+        },
+        "idPicture": {
+          "type": "string"
+        }
+      }
+    },
+    "DocumentType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "NationalId",
+        "DriversLicense",
+        "Passport"
+      ],
+      "enum": [
+        10,
+        20,
+        30
+      ]
+    },
+    "SecureDataDTO": {
+      "type": "object",
+      "required": [
+        "u1",
+        "u2",
+        "u3",
+        "publicKey"
+      ],
+      "properties": {
+        "u1": {
+          "type": "string",
+          "minLength": 1
+        },
+        "u2": {
+          "type": "string",
+          "minLength": 1
+        },
+        "u3": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publicKey": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "ConfirmationDTO": {
+      "type": "object",
+      "required": [
+        "code"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\d{6}$"
+        },
+        "smsTwilioType": {
+          "$ref": "#/definitions/SmsTwilioType"
+        }
+      }
+    },
+    "SmsTwilioType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "General",
+        "Verify"
+      ],
+      "enum": [
+        10,
+        20
+      ]
+    },
+    "UserIdPictureDTO": {
+      "type": "object",
+      "required": [
+        "idPicture"
+      ],
+      "properties": {
+        "idPicture": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "AccountInfoDTO": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/StatusDTO"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "StatusDTO": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/MobileUserStatus"
+        }
+      }
+    },
+    "MobileUserStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Pending",
+        "Accepted",
+        "Rejected",
+        "Blocked",
+        "Deleted",
+        "Countdown",
+        "HoldOn"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70
+      ]
+    },
+    "ErrorDetails": {
+      "type": "object",
+      "required": [
+        "code"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "DoesEmailExistDTO": {
+      "type": "object",
+      "required": [
+        "email"
+      ],
+      "properties": {
+        "email": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
+        }
+      }
+    },
+    "DoesPhoneNumberExistDTO": {
+      "type": "object",
+      "required": [
+        "phoneNumber"
+      ],
+      "properties": {
+        "phoneNumber": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "DoesPublicKeyExistDTO": {
+      "type": "object",
+      "required": [
+        "publicKey"
+      ],
+      "properties": {
+        "publicKey": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "RecoverWithPlatformDTO": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/RecoverDTO"
+        },
+        {
+          "type": "object",
+          "required": [
+            "platform",
+            "platformVersion",
+            "appVersion"
+          ],
+          "properties": {
+            "platform": {
+              "$ref": "#/definitions/PlatformType"
+            },
+            "platformVersion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "appVersion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "deviceModel": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "RecoverDTO": {
+      "type": "object",
+      "required": [
+        "deviceId",
+        "wallet"
+      ],
+      "properties": {
+        "deviceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "wallet": {
+          "type": "object",
+          "x-dictionaryKey": {
+            "$ref": "#/definitions/CoinType"
+          },
+          "additionalProperties": {
+            "$ref": "#/definitions/WalletDTO"
+          }
+        }
+      }
+    },
+    "RecoverDTODeprecated": {
+      "type": "object",
+      "required": [
+        "deviceId"
+      ],
+      "properties": {
+        "deviceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "wallet": {
+          "$ref": "#/definitions/WalletDeprecated"
+        }
+      }
+    },
+    "WalletDeprecated": {
+      "type": "object",
+      "properties": {
+        "dash": {
+          "$ref": "#/definitions/WalletDTODeprecated"
+        },
+        "usd": {
+          "$ref": "#/definitions/WalletDTODeprecated"
+        }
+      }
+    },
+    "WalletDTODeprecated": {
+      "type": "object",
+      "required": [
+        "walletId",
+        "copayerId",
+        "address"
+      ],
+      "properties": {
+        "walletId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "copayerId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "address": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "PhoneNumberUpdateDTO": {
+      "type": "object",
+      "required": [
+        "phoneNumber"
+      ],
+      "properties": {
+        "phoneNumber": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "EmailUpdateDTO": {
+      "type": "object",
+      "required": [
+        "email"
+      ],
+      "properties": {
+        "email": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
+        }
+      }
+    },
+    "PlatformDTO": {
+      "type": "object",
+      "required": [
+        "platform",
+        "platformVersion",
+        "appVersion"
+      ],
+      "properties": {
+        "platform": {
+          "$ref": "#/definitions/PlatformType"
+        },
+        "platformVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "appVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "deviceModel": {
+          "type": "string"
+        }
+      }
+    },
+    "ContactVisibilityDTO": {
+      "type": "object",
+      "required": [
+        "isVisible"
+      ],
+      "properties": {
+        "isVisible": {
+          "type": "boolean"
+        }
+      }
+    },
+    "KuvaLocalUserDTO": {
+      "type": "object",
+      "required": [
+        "id",
+        "extId",
+        "phoneNumber",
+        "deviceId",
+        "createdDate",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "extId": {
+          "type": "string",
+          "format": "guid"
+        },
+        "firstName": {
+          "type": "string",
+          "pattern": "^[a-zA-Z]+((['` -][a-zA-Z ])?[a-zA-Z]*)*$"
+        },
+        "lastName": {
+          "type": "string",
+          "pattern": "^[a-zA-Z]+((['` -][a-zA-Z ])?[a-zA-Z]*)*$"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "pattern": "^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
+        },
+        "phoneNumber": {
+          "type": "string",
+          "minLength": 1
+        },
+        "deviceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stripeCustomerId": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "$ref": "#/definitions/MobileUserStatus"
+        },
+        "fullName": {
+          "type": "string"
+        }
+      }
+    },
+    "InviteInstallationDTO": {
+      "type": "object",
+      "required": [
+        "deviceId",
+        "referralCode"
+      ],
+      "properties": {
+        "deviceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "referralCode": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "GeoId": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "countryCode": {
+          "type": "string"
+        }
+      }
+    },
+    "CustomerAddressModel": {
+      "type": "object",
+      "required": [
+        "id",
+        "countryId"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "email": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "receiverName": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "locationId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "countryId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "countryName": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "buildingName": {
+          "type": "string"
+        },
+        "streetNumber": {
+          "type": "string"
+        },
+        "specialInstructions": {
+          "type": "string"
+        },
+        "flag": {
+          "$ref": "#/definitions/AddressFlagType"
+        },
+        "suburbId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "suburbName": {
+          "type": "string"
+        },
+        "customSuburb": {
+          "type": "string"
+        }
+      }
+    },
+    "AddressFlagType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Own",
+        "Someone"
+      ],
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "BankDetailsModel": {
+      "type": "object",
+      "required": [
+        "id",
+        "usedBankFlow",
+        "isActive"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "number": {
+          "type": "string"
+        },
+        "sortCode": {
+          "type": "string"
+        },
+        "usedBankFlow": {
+          "$ref": "#/definitions/BankFlow"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "countryId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "country": {
+          "type": "string"
+        },
+        "agentGroupId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "agentGroup": {
+          "type": "string"
+        }
+      }
+    },
+    "BankFlow": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Kuva",
+        "Agent",
+        "TopUp"
+      ],
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "CashAgentCheckoutRequestDTO": {
+      "type": "object",
+      "required": [
+        "agentId"
+      ],
+      "properties": {
+        "nopOrderId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "agentId": {
+          "type": "string",
+          "format": "guid"
+        }
+      }
+    },
+    "KuvaLocalContactDTO": {
+      "type": "object",
+      "required": [
+        "version",
+        "message"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-z-._]+$"
+        },
+        "message": {
+          "type": "string",
+          "maxLength": 1500,
+          "minLength": 1
+        }
+      }
+    },
+    "KuvaLocalFeedbackDTO": {
+      "type": "object",
+      "required": [
+        "version",
+        "orderId",
+        "orderingProcessRating",
+        "itemsQualityRating",
+        "deliveryRating"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[0-9a-z-._]+$"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "orderId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "orderingProcessRating": {
+          "type": "integer",
+          "format": "int32",
+          "pattern": "^[0-5]+$"
+        },
+        "itemsQualityRating": {
+          "type": "integer",
+          "format": "int32",
+          "pattern": "^[0-5]+$"
+        },
+        "deliveryRating": {
+          "type": "integer",
+          "format": "int32",
+          "pattern": "^[0-5]+$"
+        },
+        "message": {
+          "type": "string",
+          "maxLength": 1500
+        },
+        "kuvaLocalUser": {
+          "$ref": "#/definitions/MobileUser"
+        }
+      }
+    },
+    "MobileUser": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ExtendedEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "isPhoneNumberConfirmed",
+            "isEmailConfirmed",
+            "updateRefreshTokenDate",
+            "documentType",
+            "dateOfBirth",
+            "canInvite",
+            "limitUsd",
+            "limitEnabled",
+            "amlChecked",
+            "isExtraToolsEnabled",
+            "isAllowKuvaCashMultiSession",
+            "isAllowKuvaLocalMultiSession",
+            "isMaintenanceModeIgnored",
+            "isVisibleInContacts",
+            "isOutboundTransferMaintenanceIgnored"
+          ],
+          "properties": {
+            "status": {
+              "$ref": "#/definitions/MobileUserStatus"
+            },
+            "isPhoneNumberConfirmed": {
+              "type": "boolean"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "phoneNumber": {
+              "type": "string"
+            },
+            "previousPhoneNumber": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "isEmailConfirmed": {
+              "type": "boolean"
+            },
+            "address": {
+              "type": "string"
+            },
+            "passportNumber": {
+              "type": "string"
+            },
+            "pushToken": {
+              "type": "string"
+            },
+            "refreshToken": {
+              "type": "string"
+            },
+            "updateRefreshTokenDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "platformType": {
+              "$ref": "#/definitions/PlatformType"
+            },
+            "platformVersion": {
+              "type": "string"
+            },
+            "appVersion": {
+              "type": "string"
+            },
+            "oldRefreshToken": {
+              "type": "string"
+            },
+            "deviceId": {
+              "type": "string"
+            },
+            "documentType": {
+              "$ref": "#/definitions/DocumentType"
+            },
+            "dateOfBirth": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "canInvite": {
+              "type": "boolean"
+            },
+            "referralCode": {
+              "$ref": "#/definitions/ReferralCode"
+            },
+            "secure": {
+              "$ref": "#/definitions/SecureData"
+            },
+            "stripeCustomerId": {
+              "type": "string"
+            },
+            "referralInviteId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "referralInvite": {
+              "$ref": "#/definitions/ReferralInvite"
+            },
+            "limitUsd": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "limitEnabled": {
+              "type": "boolean"
+            },
+            "amlChecked": {
+              "type": "boolean"
+            },
+            "checkedBy": {
+              "type": "string"
+            },
+            "isExtraToolsEnabled": {
+              "type": "boolean"
+            },
+            "isAllowKuvaCashMultiSession": {
+              "type": "boolean"
+            },
+            "isAllowKuvaLocalMultiSession": {
+              "type": "boolean"
+            },
+            "isMaintenanceModeIgnored": {
+              "type": "boolean"
+            },
+            "isVisibleInContacts": {
+              "type": "boolean"
+            },
+            "isOutboundTransferMaintenanceIgnored": {
+              "type": "boolean"
+            },
+            "cashOutBookings": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CashOutBooking"
+              }
+            },
+            "feedbacks": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Feedback"
+              }
+            },
+            "fundsRequests": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/FundsRequest"
+              }
+            },
+            "wallets": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Wallet"
+              }
+            },
+            "bugReports": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BugReport"
+              }
+            },
+            "contacts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Contact"
+              }
+            },
+            "contactToAgents": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ContactToAgent"
+              }
+            },
+            "topUpRequests": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TopUpRequest"
+              }
+            },
+            "treasuryTransfers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TreasuryTransfer"
+              }
+            },
+            "sentTransactions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Transaction"
+              }
+            },
+            "receivedTransactions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Transaction"
+              }
+            },
+            "kuvaCoinInvoices": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/KuvaCoinInvoice"
+              }
+            },
+            "masternodes": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Masternode"
+              }
+            },
+            "customerQueries": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CustomerQuery"
+              }
+            },
+            "notifications": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UserNotification"
+              }
+            },
+            "kuvaLocalFeedbacks": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/KuvaLocalFeedback"
+              }
+            },
+            "kuvaLocalContacts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/KuvaLocalContact"
+              }
+            },
+            "mobileUserRoles": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MobileUserRole"
+              }
+            },
+            "fullName": {
+              "type": "string"
+            },
+            "directProfile": {
+              "$ref": "#/definitions/MobileUserDirectProfile"
+            },
+            "localProfile": {
+              "$ref": "#/definitions/MobileUserLocalProfile"
+            },
+            "customerProfiles": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/KuvaLocalCustomerUserProfile"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ReferralCode": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "count",
+            "userId"
+          ],
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "count": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "userId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "user": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "invites": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ReferralInvite"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ReferralInvite": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "mobileUserId"
+          ],
+          "properties": {
+            "referralCodeId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "referralCode": {
+              "$ref": "#/definitions/ReferralCode"
+            },
+            "appType": {
+              "$ref": "#/definitions/AppType"
+            },
+            "agentInviterId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "agentInviter": {
+              "$ref": "#/definitions/AgentProfile"
+            },
+            "mobileUserId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "mobileUser": {
+              "$ref": "#/definitions/MobileUser"
+            }
+          }
+        }
+      ]
+    },
+    "AppType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "KuvaCash",
+        "KuvaLocal"
+      ],
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "AgentProfile": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ExtendedEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "aspNetUserId",
+            "cashOutBalanceUsd",
+            "availableCashOutAmountUsd",
+            "lng",
+            "lat",
+            "canAgentEditProfile",
+            "limitAmountWarning",
+            "cashoutEnabled",
+            "isPendingGroupCashoutsVisible",
+            "isPastGroupCashoutsVisible",
+            "isShowUserDetailsEnabled",
+            "isPendingGroupCashOnDeliveryVisible",
+            "twoFactorEnabled",
+            "groupChangeMerchantTransactionsVisible"
+          ],
+          "properties": {
+            "aspNetUserId": {
+              "type": "string",
+              "format": "guid"
+            },
+            "aspNetUser": {
+              "$ref": "#/definitions/User"
+            },
+            "cashOutBalanceUsd": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "availableCashOutAmountUsd": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "country": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "street": {
+              "type": "string"
+            },
+            "zipCode": {
+              "type": "string"
+            },
+            "lng": {
+              "type": "number",
+              "format": "double"
+            },
+            "lat": {
+              "type": "number",
+              "format": "double"
+            },
+            "timeZoneId": {
+              "type": "string"
+            },
+            "fullName": {
+              "type": "string"
+            },
+            "canAgentEditProfile": {
+              "type": "boolean"
+            },
+            "agentGroupId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "agentGroup": {
+              "$ref": "#/definitions/AgentGroup"
+            },
+            "vendorId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "agentSchedules": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AgentSchedule"
+              }
+            },
+            "cashOutBookings": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CashOutBooking"
+              }
+            },
+            "contactToAgents": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ContactToAgent"
+              }
+            },
+            "invites": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ReferralInvite"
+              }
+            },
+            "onboardingFixedFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "changeMerchantFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "changeLimit": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "limitAmountWarning": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "cashoutEnabled": {
+              "type": "boolean"
+            },
+            "isPendingGroupCashoutsVisible": {
+              "type": "boolean"
+            },
+            "isPastGroupCashoutsVisible": {
+              "type": "boolean"
+            },
+            "isShowUserDetailsEnabled": {
+              "type": "boolean"
+            },
+            "isPendingGroupCashOnDeliveryVisible": {
+              "type": "boolean"
+            },
+            "twoFactorEnabled": {
+              "type": "boolean"
+            },
+            "groupChangeMerchantTransactionsVisible": {
+              "type": "boolean"
+            }
+          }
+        }
+      ]
+    },
+    "User": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/IdentityUserOfGuid"
+        },
+        {
+          "type": "object",
+          "required": [
+            "createdDate",
+            "blocked"
+          ],
+          "properties": {
+            "createdDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "deletedOn": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "blocked": {
+              "type": "boolean"
+            },
+            "userCountries": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UserCountry"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "UserCountry": {
+      "type": "object",
+      "required": [
+        "userId",
+        "countryId"
+      ],
+      "properties": {
+        "userId": {
+          "type": "string",
+          "format": "guid"
+        },
+        "user": {
+          "$ref": "#/definitions/User"
+        },
+        "countryId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "country": {
+          "$ref": "#/definitions/Country"
+        }
+      }
+    },
+    "Country": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "available",
+            "klAvailable",
+            "klShopAvailable"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "phoneCode": {
+              "type": "string"
+            },
+            "available": {
+              "type": "boolean"
+            },
+            "klAvailable": {
+              "type": "boolean"
+            },
+            "klShopAvailable": {
+              "type": "boolean"
+            },
+            "defaultCurrency": {
+              "type": "string"
+            },
+            "isO2Code": {
+              "type": "string"
+            },
+            "bankDetails": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BankDetails"
+              }
+            },
+            "couriers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/KuvaLocalCourier"
+              }
+            },
+            "paymentOptions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CountryPaymentOption"
+              }
+            },
+            "userCountries": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UserCountry"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "BankDetails": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "usedBankFlow",
+            "isActive"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "number": {
+              "type": "string"
+            },
+            "sortCode": {
+              "type": "string"
+            },
+            "usedBankFlow": {
+              "$ref": "#/definitions/BankFlow"
+            },
+            "isActive": {
+              "type": "boolean"
+            },
+            "countryId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "country": {
+              "$ref": "#/definitions/Country"
+            },
+            "agentGroupId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "agentGroup": {
+              "$ref": "#/definitions/AgentGroup"
+            }
+          }
+        }
+      ]
+    },
+    "AgentGroup": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "kdAgentPercentageFee",
+            "topUpAgentPercentageFee",
+            "topUpAgentFixedFee",
+            "agentPercentageFee",
+            "agentFixedFee",
+            "changeMerchantFee",
+            "changeLimit",
+            "rate"
+          ],
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "kdAgentPercentageFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "topUpAgentPercentageFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "topUpAgentFixedFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "agentPercentageFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "agentFixedFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "changeMerchantFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "changeLimit": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "rate": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "countryId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "country": {
+              "$ref": "#/definitions/Country"
+            },
+            "phoneNumber": {
+              "type": "string"
+            },
+            "settlementCurrency": {
+              "type": "string"
+            },
+            "agents": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AgentProfile"
+              }
+            },
+            "settlements": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Settlement"
+              }
+            },
+            "bankDetails": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BankDetails"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Settlement": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "agentGroupId",
+            "generatedById",
+            "settlementPaymentType",
+            "settlementAmount",
+            "ordersCount",
+            "direction",
+            "coinType"
+          ],
+          "properties": {
+            "status": {
+              "$ref": "#/definitions/KuvaLocalSettlementManifestStatus"
+            },
+            "agentGroupId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "agentGroup": {
+              "$ref": "#/definitions/AgentGroup"
+            },
+            "treasuryTransfer": {
+              "$ref": "#/definitions/TreasuryTransfer"
+            },
+            "topUpRequests": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TopUpRequest"
+              }
+            },
+            "cashOutBookings": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CashOutBooking"
+              }
+            },
+            "generatedBy": {
+              "$ref": "#/definitions/User"
+            },
+            "generatedById": {
+              "type": "string",
+              "format": "guid"
+            },
+            "notes": {
+              "type": "string"
+            },
+            "completeNote": {
+              "type": "string"
+            },
+            "settlementPaymentType": {
+              "$ref": "#/definitions/SettlementPaymentType"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "transactionDetails": {
+              "type": "string"
+            },
+            "settlementAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "ordersCount": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "direction": {
+              "$ref": "#/definitions/SettlementDirection"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "coinType": {
+              "$ref": "#/definitions/CoinType"
+            }
+          }
+        }
+      ]
+    },
+    "KuvaLocalSettlementManifestStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "New",
+        "Processing",
+        "Completed",
+        "PayoutFailed",
+        "Canceled",
+        "Transferred",
+        "PaymentDue"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70
+      ]
+    },
+    "TreasuryTransfer": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "amount",
+            "walletType",
+            "treasuryTransferStatus"
+          ],
+          "properties": {
+            "amount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "address": {
+              "type": "string"
+            },
+            "txType": {
+              "type": "string"
+            },
+            "topUpId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "kcInvoiceId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "refundedOutboundTransferId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "walletType": {
+              "$ref": "#/definitions/CoinType"
+            },
+            "treasuryTransferStatus": {
+              "$ref": "#/definitions/TreasuryTransferStatus"
+            },
+            "senderId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "sender": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "transactionFormJson": {
+              "type": "string"
+            },
+            "kuvaLocalSettlementManifestId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "settlement": {
+              "$ref": "#/definitions/Settlement"
+            },
+            "kuvaLocalVendorSettlementManifestId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "kuvaLocalVendorSettlementManifest": {
+              "$ref": "#/definitions/KuvaLocalVendorSettlementManifest"
+            },
+            "settlementId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "masternodeRewardPaymentId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "masternodeRewardPayment": {
+              "$ref": "#/definitions/MasternodeRewardPayment"
+            },
+            "failReason": {
+              "type": "string"
+            },
+            "refundedTransferId": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      ]
+    },
+    "TreasuryTransferStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Successful",
+        "Failed",
+        "Pending",
+        "DustAmount",
+        "Processing",
+        "Refunded",
+        "RefundInactiveToActiveFailed",
+        "RefundInactiveToActiveCreated"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80
+      ]
+    },
+    "KuvaLocalVendorSettlementManifest": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "userId",
+            "generatedById",
+            "calculatedSettlement",
+            "cost",
+            "totalSettled",
+            "settlementPaymentType"
+          ],
+          "properties": {
+            "status": {
+              "$ref": "#/definitions/KuvaLocalSettlementManifestStatus"
+            },
+            "userId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "user": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "vendorId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "treasuryTransfer": {
+              "$ref": "#/definitions/TreasuryTransfer"
+            },
+            "manifests": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/KuvaLocalManifest"
+              }
+            },
+            "generatedBy": {
+              "$ref": "#/definitions/User"
+            },
+            "generatedById": {
+              "type": "string",
+              "format": "guid"
+            },
+            "notes": {
+              "type": "string"
+            },
+            "calculatedSettlement": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "cost": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "totalSettled": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "settlementPaymentType": {
+              "$ref": "#/definitions/SettlementPaymentType"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "KuvaLocalManifest": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "orderAmount",
+            "cost",
+            "costExclTax",
+            "manifestStatus",
+            "settlementStatus",
+            "orderStatus",
+            "paymentType"
+          ],
+          "properties": {
+            "locationId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "location": {
+              "type": "string"
+            },
+            "customerNumber": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "orderId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "orderReference": {
+              "type": "string"
+            },
+            "orderNumber": {
+              "type": "string"
+            },
+            "orderedBy": {
+              "type": "string"
+            },
+            "orderAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "vendorId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "vendor": {
+              "type": "string"
+            },
+            "cost": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "costExclTax": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "city": {
+              "type": "string"
+            },
+            "agentNote": {
+              "type": "string"
+            },
+            "deliveryImage": {
+              "$ref": "#/definitions/ManifestImage"
+            },
+            "manifestStatus": {
+              "$ref": "#/definitions/ManifestStatus"
+            },
+            "settlementStatus": {
+              "$ref": "#/definitions/KuvaLocalSettlementManifestStatus"
+            },
+            "orderStatus": {
+              "$ref": "#/definitions/OrderStatus"
+            },
+            "paymentType": {
+              "$ref": "#/definitions/StripePaymentTrackingType"
+            },
+            "agentId": {
+              "type": "string",
+              "format": "guid"
+            },
+            "agent": {
+              "$ref": "#/definitions/User"
+            },
+            "settlementId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "settlement": {
+              "$ref": "#/definitions/KuvaLocalVendorSettlementManifest"
+            },
+            "trackingNumber": {
+              "type": "string"
+            },
+            "kuvaLocalDeliveryManifests": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/KuvaLocalDeliveryManifest"
+              }
+            },
+            "storeReceipts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ManifestImage"
+              }
+            },
+            "agentFees": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kuvaFees": {
+              "type": "number",
+              "format": "decimal"
+            }
+          }
+        }
+      ]
+    },
+    "ManifestImage": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "manifestId",
+            "calculatedAgentAmount",
+            "calculatedBackOfficeAmount",
+            "type",
+            "name"
+          ],
+          "properties": {
+            "manifestId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "extension": {
+              "type": "string"
+            },
+            "agentCurrency": {
+              "type": "string"
+            },
+            "backOfficeCurrency": {
+              "type": "string"
+            },
+            "calculatedAgentAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "calculatedBackOfficeAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "type": {
+              "$ref": "#/definitions/ManifestImageType"
+            },
+            "name": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        }
+      ]
+    },
+    "ManifestImageType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Delivery",
+        "Receipt"
+      ],
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "BaseEntity": {
+      "type": "object",
+      "required": [
+        "id",
+        "createdDate"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "ManifestStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Unassigned",
+        "Rejected",
+        "Processing",
+        "PickupReady",
+        "Delivered",
+        "FullyCompleted",
+        "PartiallyCompleted"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "OrderStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Pending",
+        "Processing",
+        "Complete",
+        "Rejected",
+        "Saved",
+        "PaymentExpired",
+        "Partial",
+        "Underpaid",
+        "Overpaid",
+        "Paid"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40,
+        60,
+        70,
+        80,
+        100,
+        110,
+        120
+      ]
+    },
+    "StripePaymentTrackingType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "None",
+        "Intent",
+        "Charge"
+      ],
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "KuvaLocalDeliveryManifest": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "state",
+            "shippingType",
+            "productsCount",
+            "kuvaLocalManifestId"
+          ],
+          "properties": {
+            "orderId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "receiverName": {
+              "type": "string"
+            },
+            "receiverPhone": {
+              "type": "string"
+            },
+            "trackingNumber": {
+              "type": "string"
+            },
+            "shipmentCompany": {
+              "type": "string"
+            },
+            "shippingAddressDetail": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "status": {
+              "$ref": "#/definitions/DeliveryManifestStatus"
+            },
+            "state": {
+              "$ref": "#/definitions/DeliveryManifestState"
+            },
+            "shippingType": {
+              "$ref": "#/definitions/ShippingType"
+            },
+            "pickUpAddressId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "addressId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "products": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/VendorProduct"
+              }
+            },
+            "productsCount": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "kuvaLocalManifestId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "deliveryTime": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "courierDispatchOrderId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "courierDispatchOrder": {
+              "$ref": "#/definitions/KuvaLocalCourierDispatchOrder"
+            },
+            "agentGroupId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "kuvaLocalManifest": {
+              "$ref": "#/definitions/KuvaLocalManifest"
+            },
+            "lastUpdateUserId": {
+              "type": "string",
+              "format": "guid"
+            },
+            "lastUpdateUser": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      ]
+    },
+    "DeliveryManifestStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Processing",
+        "ReadyForPickup",
+        "PickedUp",
+        "Delivered",
+        "ReceiverNotPresent",
+        "ReadyForPickupByCourierDispatch",
+        "PickedUpByCourierDispatch",
+        "NotPickedUp",
+        "NotPickedUpByCourierDispatch",
+        "DeliveryAbandonment"
+      ],
+      "enum": [
+        10,
+        30,
+        40,
+        60,
+        70,
+        80,
+        90,
+        100,
+        110,
+        120
+      ]
+    },
+    "DeliveryManifestState": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "New",
+        "Processing",
+        "Completed",
+        "Exception"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40
+      ]
+    },
+    "ShippingType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Delivery",
+        "PickUp",
+        "SpecialDelivery"
+      ],
+      "enum": [
+        1,
+        2,
+        3
+      ]
+    },
+    "VendorProduct": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "kuvaLocalDeliveryManifestId",
+            "quantity",
+            "orderAmount",
+            "vendorProductDetailId",
+            "price",
+            "priceExclTax"
+          ],
+          "properties": {
+            "kuvaLocalDeliveryManifestId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "kuvaLocalDeliveryManifest": {
+              "$ref": "#/definitions/KuvaLocalDeliveryManifest"
+            },
+            "orderId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "productId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "productName": {
+              "type": "string"
+            },
+            "sku": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "vendorId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "vendor": {
+              "type": "string"
+            },
+            "orderAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "vendorProductDetailId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "price": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "priceExclTax": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "unitType": {
+              "type": "string"
+            },
+            "unitTypeAmount": {
+              "type": "string"
+            },
+            "Details": {
+              "$ref": "#/definitions/VendorProductDetail"
+            }
+          }
+        }
+      ]
+    },
+    "VendorProductDetail": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "orderItemId",
+            "kuvaFixedResult",
+            "kuvaCategoryValue",
+            "kuvaCategoryResult",
+            "kuvaLiquidityResult",
+            "specialDeliveryResult",
+            "currencyCloudValue",
+            "currencyCloudResult",
+            "finalUnitPrice",
+            "shippingType",
+            "unitPrice",
+            "unitPriceLocalCurrency",
+            "priceInclFee",
+            "priceInclFeeLocalCurrency",
+            "feeTax",
+            "specialDeliveryTax",
+            "vendorProductId"
+          ],
+          "properties": {
+            "orderItemId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "kuvaFixedResult": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kuvaCategoryValue": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kuvaCategoryResult": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kuvaLiquidityResult": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "specialDeliveryResult": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "currencyCloudValue": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "currencyCloudResult": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "finalUnitPrice": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "shippingType": {
+              "$ref": "#/definitions/ShippingType"
+            },
+            "addressId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "unitPrice": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "unitPriceLocalCurrency": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "priceInclFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "priceInclFeeLocalCurrency": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "feeTax": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "specialDeliveryTax": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "entityCacheKey": {
+              "type": "string"
+            },
+            "vendorProduct": {
+              "$ref": "#/definitions/VendorProduct"
+            },
+            "vendorProductId": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      ]
+    },
+    "KuvaLocalCourierDispatchOrder": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "courierId",
+            "orderedUserId"
+          ],
+          "properties": {
+            "courierId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "courier": {
+              "$ref": "#/definitions/KuvaLocalCourier"
+            },
+            "orderedUserId": {
+              "type": "string",
+              "format": "guid"
+            },
+            "orderedUser": {
+              "$ref": "#/definitions/User"
+            },
+            "manifests": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/KuvaLocalDeliveryManifest"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "KuvaLocalCourier": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "countryId",
+            "isDeleted"
+          ],
+          "properties": {
+            "companyName": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "countryId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "country": {
+              "$ref": "#/definitions/Country"
+            },
+            "zones": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "managerEmail": {
+              "type": "string"
+            },
+            "managerName": {
+              "type": "string"
+            },
+            "managerPhoneNumber": {
+              "type": "string"
+            },
+            "orderingPhoneNumber": {
+              "type": "string"
+            },
+            "orderingEmail": {
+              "type": "string"
+            },
+            "carbonCopyEmail": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "boolean"
+            },
+            "agentGroupId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "dispatches": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/KuvaLocalCourierDispatchOrder"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "SettlementPaymentType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Kuvacash",
+        "Bank",
+        "Cash"
+      ],
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "MasternodeRewardPayment": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "amount",
+            "masternodeId",
+            "isManually"
+          ],
+          "properties": {
+            "amount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "masternodeId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "masternode": {
+              "$ref": "#/definitions/Masternode"
+            },
+            "treasuryTransfer": {
+              "$ref": "#/definitions/TreasuryTransfer"
+            },
+            "isManually": {
+              "type": "boolean"
+            },
+            "backOfficeUser": {
+              "$ref": "#/definitions/User"
+            },
+            "backOfficeUserId": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        }
+      ]
+    },
+    "Masternode": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ExtendedEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "userId",
+            "account",
+            "collateralConfirmed",
+            "collateralReturned",
+            "allocatedAmount",
+            "totalRewardAmount",
+            "currentRewardAmount",
+            "nextPaymentDate",
+            "lastSettlementDate",
+            "submittedDate",
+            "status",
+            "type",
+            "failAttempts"
+          ],
+          "properties": {
+            "userId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "user": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "operatorAddress": {
+              "type": "string"
+            },
+            "nodeIpAddress": {
+              "type": "string"
+            },
+            "containerId": {
+              "type": "string"
+            },
+            "account": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "collateralTxId": {
+              "type": "string"
+            },
+            "collateralConfirmed": {
+              "type": "boolean"
+            },
+            "collateralWalletId": {
+              "type": "string"
+            },
+            "collateralReturned": {
+              "type": "boolean"
+            },
+            "blsPrivateKey": {
+              "type": "string"
+            },
+            "allocatedAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "totalRewardAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "currentRewardAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "nextPaymentDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "lastSettlementDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "submittedDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "status": {
+              "$ref": "#/definitions/MasternodeStatus"
+            },
+            "type": {
+              "$ref": "#/definitions/MasternodeType"
+            },
+            "failAttempts": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "rewardPayments": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MasternodeRewardPayment"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "MasternodeStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Reserved",
+        "Syncing",
+        "WaitingForProTx",
+        "OperatorKeyChanged",
+        "Submitted",
+        "Inactive",
+        "Active",
+        "Failed",
+        "Processing",
+        "CollateralSpent"
+      ],
+      "enum": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        20,
+        30,
+        40,
+        50
+      ]
+    },
+    "MasternodeType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "LicencedAgent",
+        "MasterAgent",
+        "SuperLAN"
+      ],
+      "enum": [
+        10,
+        20,
+        30
+      ]
+    },
+    "ExtendedEntity": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "extId"
+          ],
+          "properties": {
+            "extId": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        }
+      ]
+    },
+    "TopUpRequest": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ExtendedEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "expirationDate",
+            "requsetType",
+            "fromAmount",
+            "totalFromAmount",
+            "initialExpectedAmount",
+            "change",
+            "rate",
+            "kuvaFee",
+            "kdAgentFeeSettingValue",
+            "kdAgentFeeSrcCurrencyAmount",
+            "kdAgentFeeDestCurrencyAmount",
+            "onboardingFee",
+            "onboardingFeeDestCurrencyAmount",
+            "currencyCloudFee",
+            "clearJunctionFee",
+            "toAmount",
+            "status",
+            "userId"
+          ],
+          "properties": {
+            "expirationDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "completedDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "requsetType": {
+              "$ref": "#/definitions/AddFundsType"
+            },
+            "reference": {
+              "type": "string"
+            },
+            "fromAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "fromCurrency": {
+              "type": "string"
+            },
+            "totalFromAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "initialExpectedAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "change": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "rate": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kuvaFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kdAgentFeeSettingValue": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kdAgentFeeSrcCurrencyAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kdAgentFeeDestCurrencyAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "onboardingFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "onboardingFeeDestCurrencyAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "currencyCloudFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "clearJunctionFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "agentFixedCashFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "agentPercentCashFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "agentTopupFeeDestAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kuvaFixedCashFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kuvaPercentCashFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "liquidityFeePersentsAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "totalFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "toAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "toCurrency": {
+              "type": "string"
+            },
+            "manualAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "status": {
+              "$ref": "#/definitions/TopUpStatus"
+            },
+            "userId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "user": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "conversions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Conversion"
+              }
+            },
+            "payins": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Payin"
+              }
+            },
+            "cashOuts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CashOutBooking"
+              }
+            },
+            "treasuryTransfer": {
+              "$ref": "#/definitions/TreasuryTransfer"
+            },
+            "agentId": {
+              "type": "string",
+              "format": "guid"
+            },
+            "manualActionDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "boUserId": {
+              "type": "string",
+              "format": "guid"
+            },
+            "cjFeePayerKuva": {
+              "type": "boolean"
+            },
+            "nopCommerceOrderId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "toAgentFixedCashFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "toAgentPercentCashFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "settlementId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "settlement": {
+              "$ref": "#/definitions/Settlement"
+            },
+            "bankDetails": {
+              "$ref": "#/definitions/BankDetails"
+            },
+            "bankDetailsId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "bankDetailsSnapshot": {
+              "type": "string"
+            },
+            "failReason": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "AddFundsType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "BankTransfer",
+        "Cash",
+        "KuvaLocalBankTransfer",
+        "KuvaLocalCash",
+        "KuvaDirectBankTransfer",
+        "CashOnDelivery",
+        "ChangeMerchant"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70
+      ]
+    },
+    "TopUpStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Ordered",
+        "Transferred",
+        "Completed",
+        "Cancelled",
+        "Expired",
+        "FundsCleared",
+        "TransferFailed",
+        "IncorrectPayin",
+        "ErrorNopCommerceOrder",
+        "Underpaid",
+        "Overpaid"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100,
+        110
+      ]
+    },
+    "Conversion": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "conversionDate",
+            "status",
+            "rate",
+            "cancelAttempts"
+          ],
+          "properties": {
+            "currencyCloudId": {
+              "type": "string"
+            },
+            "conversionDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "settlementDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "shortReference": {
+              "type": "string"
+            },
+            "status": {
+              "$ref": "#/definitions/ConversionStatus"
+            },
+            "rate": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "topUpRequestId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "topUpRequest": {
+              "$ref": "#/definitions/TopUpRequest"
+            },
+            "cancelAttempts": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      ]
+    },
+    "ConversionStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Pending",
+        "Settled",
+        "Cancelled",
+        "CancelFailed",
+        "CreationFailed"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40,
+        50
+      ]
+    },
+    "Payin": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "amount",
+            "sentAmount",
+            "status"
+          ],
+          "properties": {
+            "amount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "sentAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "sentCurrency": {
+              "type": "string"
+            },
+            "payerName": {
+              "type": "string"
+            },
+            "payerRequisites": {
+              "type": "string"
+            },
+            "orderReference": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "status": {
+              "$ref": "#/definitions/PayinStatus"
+            },
+            "topUpRequestId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "topUpRequest": {
+              "$ref": "#/definitions/TopUpRequest"
+            }
+          }
+        }
+      ]
+    },
+    "PayinStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "PendingVerification",
+        "Processed",
+        "Duplicate"
+      ],
+      "enum": [
+        10,
+        20,
+        30
+      ]
+    },
+    "CashOutBooking": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ExtendedEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "date",
+            "amountUsd",
+            "status",
+            "userId",
+            "agentId",
+            "agentFixedFee",
+            "agentFeePersents",
+            "kuvaDirectAgentFeePersents",
+            "kuvaFeePersents",
+            "totalFee"
+          ],
+          "properties": {
+            "referenceNumber": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "amountUsd": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "status": {
+              "$ref": "#/definitions/CashOutBookingStatus"
+            },
+            "userId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "user": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "agentId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "agent": {
+              "$ref": "#/definitions/AgentProfile"
+            },
+            "processedByAgentId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "processedByAgent": {
+              "$ref": "#/definitions/AgentProfile"
+            },
+            "agentFixedFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "agentFeePersents": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kuvaDirectAgentFeePersents": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kuvaFeePersents": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "totalFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "settlementId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "settlement": {
+              "$ref": "#/definitions/Settlement"
+            },
+            "topUpRequestId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "topUpRequest": {
+              "$ref": "#/definitions/TopUpRequest"
+            }
+          }
+        }
+      ]
+    },
+    "CashOutBookingStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Pending",
+        "Active",
+        "Cancelled",
+        "Completed",
+        "Invalid",
+        "PendingPayment"
+      ],
+      "enum": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50
+      ]
+    },
+    "SettlementDirection": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "ToAgent",
+        "ToKuva"
+      ],
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "CountryPaymentOption": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "paymentMethod"
+          ],
+          "properties": {
+            "paymentMethod": {
+              "$ref": "#/definitions/PaymentMethod"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "countryId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "country": {
+              "$ref": "#/definitions/Country"
+            }
+          }
+        }
+      ]
+    },
+    "PaymentMethod": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "KuvaCash",
+        "CreditCard",
+        "BankAccount",
+        "Cash",
+        "InstantCredit",
+        "ApplePay",
+        "GooglePay",
+        "CashOnDelivery",
+        "CreditWalletOnly"
+      ],
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "IdentityUserOfGuid": {
+      "type": "object",
+      "required": [
+        "id",
+        "emailConfirmed",
+        "phoneNumberConfirmed",
+        "twoFactorEnabled",
+        "lockoutEnabled",
+        "accessFailedCount"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "guid"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "normalizedUserName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "normalizedEmail": {
+          "type": "string"
+        },
+        "emailConfirmed": {
+          "type": "boolean"
+        },
+        "passwordHash": {
+          "type": "string"
+        },
+        "securityStamp": {
+          "type": "string"
+        },
+        "concurrencyStamp": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "phoneNumberConfirmed": {
+          "type": "boolean"
+        },
+        "twoFactorEnabled": {
+          "type": "boolean"
+        },
+        "lockoutEnd": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lockoutEnabled": {
+          "type": "boolean"
+        },
+        "accessFailedCount": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "AgentSchedule": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "dayOfWeek",
+            "startTime",
+            "endTime",
+            "isAvailable",
+            "agentProfileId"
+          ],
+          "properties": {
+            "dayOfWeek": {
+              "$ref": "#/definitions/DayOfWeek"
+            },
+            "startTime": {
+              "type": "string",
+              "format": "time-span"
+            },
+            "endTime": {
+              "type": "string",
+              "format": "time-span"
+            },
+            "isAvailable": {
+              "type": "boolean"
+            },
+            "agentProfileId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "agentProfile": {
+              "$ref": "#/definitions/AgentProfile"
+            }
+          }
+        }
+      ]
+    },
+    "DayOfWeek": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "ContactToAgent": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "senderId",
+            "agentId"
+          ],
+          "properties": {
+            "version": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "senderId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "sender": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "agentId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "agent": {
+              "$ref": "#/definitions/AgentProfile"
+            }
+          }
+        }
+      ]
+    },
+    "SecureData": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "userId"
+          ],
+          "properties": {
+            "u1": {
+              "type": "string"
+            },
+            "u2": {
+              "type": "string"
+            },
+            "u3": {
+              "type": "string"
+            },
+            "publicKey": {
+              "type": "string"
+            },
+            "userId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "user": {
+              "$ref": "#/definitions/MobileUser"
+            }
+          }
+        }
+      ]
+    },
+    "Feedback": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "rating",
+            "userId"
+          ],
+          "properties": {
+            "version": {
+              "type": "string"
+            },
+            "rating": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "content": {
+              "type": "string"
+            },
+            "userId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "user": {
+              "$ref": "#/definitions/MobileUser"
+            }
+          }
+        }
+      ]
+    },
+    "FundsRequest": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ExtendedEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "amountUsd",
+            "status",
+            "total",
+            "totalAmount",
+            "type",
+            "recipientId"
+          ],
+          "properties": {
+            "amountUsd": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "message": {
+              "type": "string"
+            },
+            "status": {
+              "$ref": "#/definitions/FundsRequestStatus"
+            },
+            "expirationDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "payCode": {
+              "type": "string"
+            },
+            "total": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "totalAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "type": {
+              "$ref": "#/definitions/FundsRequestType"
+            },
+            "recipientId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "recipient": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "nopOrderId": {
+              "$ref": "#/definitions/GeoId"
+            }
+          }
+        }
+      ]
+    },
+    "FundsRequestStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Pending",
+        "Payed",
+        "Rejected",
+        "Expired",
+        "InvalidPayIn",
+        "Canceled"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "FundsRequestType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Temporary",
+        "Permanent",
+        "KuvaLocalOrder"
+      ],
+      "enum": [
+        10,
+        20,
+        30
+      ]
+    },
+    "Wallet": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "userId",
+            "type"
+          ],
+          "properties": {
+            "walletId": {
+              "type": "string"
+            },
+            "copayerId": {
+              "type": "string"
+            },
+            "userId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "user": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "type": {
+              "$ref": "#/definitions/CoinType"
+            },
+            "addresses": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/WalletAddress"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "WalletAddress": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "isMain",
+            "walletId"
+          ],
+          "properties": {
+            "address": {
+              "type": "string"
+            },
+            "isMain": {
+              "type": "boolean"
+            },
+            "walletId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "wallet": {
+              "$ref": "#/definitions/Wallet"
+            }
+          }
+        }
+      ]
+    },
+    "BugReport": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "mobileUserId"
+          ],
+          "properties": {
+            "mobileUserId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "version": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "user": {
+              "$ref": "#/definitions/MobileUser"
+            }
+          }
+        }
+      ]
+    },
+    "Contact": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "mobileUserId",
+            "responseType",
+            "haveBeenActioned"
+          ],
+          "properties": {
+            "mobileUserId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "version": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "responseType": {
+              "$ref": "#/definitions/ResponseType"
+            },
+            "haveBeenActioned": {
+              "type": "boolean"
+            },
+            "userMadeLastUpdate": {
+              "type": "string",
+              "format": "guid"
+            },
+            "adminNote": {
+              "type": "string"
+            },
+            "user": {
+              "$ref": "#/definitions/MobileUser"
+            }
+          }
+        }
+      ]
+    },
+    "ResponseType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "None",
+        "WhatsApp",
+        "Phone",
+        "Email",
+        "Sms"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40,
+        50
+      ]
+    },
+    "Transaction": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "totalAmount",
+            "fee",
+            "amount",
+            "systemFee",
+            "walletType",
+            "transferStatus",
+            "isInstantSend"
+          ],
+          "properties": {
+            "bwsId": {
+              "type": "string"
+            },
+            "inputTxId": {
+              "type": "string"
+            },
+            "txId": {
+              "type": "string"
+            },
+            "senderId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "sender": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "recipientId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "recipient": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "recipientWalletAddress": {
+              "type": "string"
+            },
+            "senderWalletAddress": {
+              "type": "string"
+            },
+            "totalAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "fee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "amount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "systemFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "amountCoins": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "commissionCoins": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "amountUsd": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "commissionUsd": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "totalFeeUsd": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "upholdFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "kuvaFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "rate": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "originalRate": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "status": {
+              "type": "string"
+            },
+            "txType": {
+              "type": "string"
+            },
+            "cashOutBookingId": {
+              "type": "string"
+            },
+            "fundsRequestId": {
+              "type": "string",
+              "format": "guid"
+            },
+            "message": {
+              "type": "string"
+            },
+            "walletType": {
+              "$ref": "#/definitions/CoinType"
+            },
+            "upholdTransaction": {
+              "$ref": "#/definitions/UpholdTransaction"
+            },
+            "transferStatus": {
+              "$ref": "#/definitions/TransferStatus"
+            },
+            "isInstantSend": {
+              "type": "boolean"
+            },
+            "kcInvoiceId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "treasuryTransferId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "kuvaCoinInvoice": {
+              "$ref": "#/definitions/KuvaCoinInvoice"
+            },
+            "customData": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "failReason": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "UpholdTransaction": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "createdAt",
+            "originAmount",
+            "originBaseAmount",
+            "originCommission",
+            "originFee",
+            "originRate",
+            "destinationAmount",
+            "destinationBaseAmount",
+            "destinationCommission",
+            "destinationFee",
+            "destinationRate",
+            "status"
+          ],
+          "properties": {
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "originAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "originBaseAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "originCurrency": {
+              "type": "string"
+            },
+            "originCommission": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "originFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "originRate": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "originDescription": {
+              "type": "string"
+            },
+            "destinationAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "destinationBaseAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "destinationCurrency": {
+              "type": "string"
+            },
+            "destinationCommission": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "destinationFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "destinationRate": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "destinationDescription": {
+              "type": "string"
+            },
+            "upholdTransactionId": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "transactionId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "transaction": {
+              "$ref": "#/definitions/Transaction"
+            },
+            "status": {
+              "$ref": "#/definitions/UpholdTransactionStatus"
+            }
+          }
+        }
+      ]
+    },
+    "UpholdTransactionStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Completed",
+        "Cancelled",
+        "Pending",
+        "Waiting",
+        "Failed",
+        "Refunded",
+        "Processing"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70
+      ]
+    },
+    "TransferStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Completed",
+        "Pending",
+        "Failed",
+        "PayoutFailed",
+        "ExchangeFailed",
+        "ExchangePending",
+        "BundleTransferPending",
+        "BundleTransferFailed",
+        "Refunded",
+        "RefundPending",
+        "AddressInvalid",
+        "ConfirmationPending",
+        "Invalid"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100,
+        110,
+        120,
+        130
+      ]
+    },
+    "KuvaCoinInvoice": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "originAmount",
+            "destinationAmount",
+            "rate",
+            "expirationDate",
+            "status",
+            "userId"
+          ],
+          "properties": {
+            "originAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "originCurrency": {
+              "type": "string"
+            },
+            "receivedAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "destinationAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "rate": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "transferAddress": {
+              "type": "string"
+            },
+            "expirationDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "status": {
+              "$ref": "#/definitions/InvoiceStatus"
+            },
+            "userId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "user": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "statusLog": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/KuvaCoinInvoiceStatus"
+              }
+            },
+            "transaction": {
+              "$ref": "#/definitions/Transaction"
+            },
+            "manualActionDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "backOfficeUserId": {
+              "type": "string",
+              "format": "guid"
+            }
+          }
+        }
+      ]
+    },
+    "InvoiceStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Pending",
+        "Expired",
+        "Cancelled",
+        "Completed",
+        "PayoutFailed",
+        "FundsReceived",
+        "InvalidPayin",
+        "Processing"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80
+      ]
+    },
+    "KuvaCoinInvoiceStatus": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "invoiceId"
+          ],
+          "properties": {
+            "status": {
+              "$ref": "#/definitions/InvoiceStatus"
+            },
+            "invoiceId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "kuvaCoinInvoice": {
+              "$ref": "#/definitions/KuvaCoinInvoice"
+            }
+          }
+        }
+      ]
+    },
+    "CustomerQuery": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "customerFirstName": {
+              "type": "string"
+            },
+            "customerLastName": {
+              "type": "string"
+            },
+            "customerPhoneNumber": {
+              "type": "string"
+            },
+            "details": {
+              "type": "string"
+            },
+            "status": {
+              "$ref": "#/definitions/CustomerQueryStatus"
+            },
+            "reporter": {
+              "type": "string"
+            },
+            "userId": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      ]
+    },
+    "CustomerQueryStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Open",
+        "Resolved",
+        "Closed"
+      ],
+      "enum": [
+        10,
+        20,
+        30
+      ]
+    },
+    "UserNotification": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "isViewed",
+            "userId"
+          ],
+          "properties": {
+            "type": {
+              "$ref": "#/definitions/MobileUserPushNotificationType"
+            },
+            "message": {
+              "type": "string"
+            },
+            "isViewed": {
+              "type": "boolean"
+            },
+            "entityId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "userId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "user": {
+              "$ref": "#/definitions/MobileUser"
+            }
+          }
+        }
+      ]
+    },
+    "MobileUserPushNotificationType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "ActiveOrder",
+        "PastOrder",
+        "SavedOrder",
+        "Support",
+        "Feedback"
+      ],
+      "enum": [
+        10,
+        20,
+        30,
+        40,
+        50
+      ]
+    },
+    "KuvaLocalFeedback": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "orderingProcessRating",
+            "itemsQualityRating",
+            "deliveryRating",
+            "kuvaLocalUserId"
+          ],
+          "properties": {
+            "version": {
+              "type": "string"
+            },
+            "nopOrderId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "orderingProcessRating": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "itemsQualityRating": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "deliveryRating": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "message": {
+              "type": "string"
+            },
+            "kuvaLocalUserId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "kuvaLocalUser": {
+              "$ref": "#/definitions/MobileUser"
+            }
+          }
+        }
+      ]
+    },
+    "KuvaLocalContact": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "kuvaLocalUserId",
+            "haveBeenActioned"
+          ],
+          "properties": {
+            "version": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "kuvaLocalUserId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "haveBeenActioned": {
+              "type": "boolean"
+            },
+            "userMadeLastUpdate": {
+              "type": "string",
+              "format": "guid"
+            },
+            "adminNote": {
+              "type": "string"
+            },
+            "kuvaLocalUser": {
+              "$ref": "#/definitions/MobileUser"
+            }
+          }
+        }
+      ]
+    },
+    "MobileUserRole": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "mobileRoleId",
+            "mobileUserId"
+          ],
+          "properties": {
+            "mobileRole": {
+              "$ref": "#/definitions/MobileRole"
+            },
+            "mobileRoleId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "mobileUser": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "mobileUserId": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      ]
+    },
+    "MobileRole": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "roleName": {
+              "type": "string"
+            },
+            "mobileUserRoles": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MobileUserRole"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "MobileUserDirectProfile": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "mobileUserId",
+            "onboardingFeePaid",
+            "status"
+          ],
+          "properties": {
+            "mobileUserId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "mobileUser": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "onboardingFeePaid": {
+              "type": "boolean"
+            },
+            "status": {
+              "$ref": "#/definitions/MobileUserStatus"
+            }
+          }
+        }
+      ]
+    },
+    "MobileUserLocalProfile": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "mobileUserId",
+            "status"
+          ],
+          "properties": {
+            "mobileUserId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "mobileUser": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "status": {
+              "$ref": "#/definitions/MobileUserStatus"
+            }
+          }
+        }
+      ]
+    },
+    "KuvaLocalCustomerUserProfile": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BaseEntity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "mobileUserId",
+            "nopCommerceCustomerId"
+          ],
+          "properties": {
+            "mobileUserId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "mobileUser": {
+              "$ref": "#/definitions/MobileUser"
+            },
+            "nopCommerceCustomerId": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "countryCode": {
+              "type": "string"
+            },
+            "nopCustomerGeoId": {
+              "$ref": "#/definitions/GeoId"
+            }
+          }
+        }
+      ]
+    },
+    "NopOrderWithProductModel": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/NopOrderModel"
+        },
+        {
+          "type": "object",
+          "required": [
+            "paidAmountRealMoneyWithRejectShopCurrency"
+          ],
+          "properties": {
+            "mobileUserId": {
+              "type": "string",
+              "format": "guid"
+            },
+            "products": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/NopOrderItemModel"
+              }
+            },
+            "paidAmountRealMoneyWithRejectShopCurrency": {
+              "type": "number",
+              "format": "decimal"
+            }
+          }
+        }
+      ]
+    },
+    "NopOrderItemModel": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/NopProductModel"
+        },
+        {
+          "type": "object",
+          "required": [
+            "quantity",
+            "orderAmount",
+            "cost"
+          ],
+          "properties": {
+            "id": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "productId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "vendor": {
+              "type": "string"
+            },
+            "vendorDescription": {
+              "type": "string"
+            },
+            "vendorAddress": {
+              "type": "string"
+            },
+            "orderId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "quantity": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "orderAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "cost": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "shopLocationId": {
+              "$ref": "#/definitions/GeoId"
+            },
+            "configuration": {
+              "$ref": "#/definitions/NopProductConfigurationModel"
+            },
+            "attributeXmlValue": {
+              "type": "string"
+            },
+            "details": {
+              "$ref": "#/definitions/NopOrderItemDetailsModel"
+            },
+            "Details": {
+              "$ref": "#/definitions/NopOrderItemDetailsModel"
+            }
+          }
+        }
+      ]
+    },
+    "NopProductConfigurationModel": {
+      "type": "object",
+      "required": [
+        "maximumCountCombo",
+        "amountLocalCurrency",
+        "amountShopCurrency"
+      ],
+      "properties": {
+        "option": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NopConfigurationOptionModel"
+          }
+        },
+        "combo": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NopConfigurationOptionModel"
+          }
+        },
+        "configurationTitle": {
+          "type": "string"
+        },
+        "comboTitle": {
+          "type": "string"
+        },
+        "maximumCountCombo": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "note": {
+          "$ref": "#/definitions/NopConfigurationOptionModel"
+        },
+        "amountLocalCurrency": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "amountShopCurrency": {
+          "type": "number",
+          "format": "decimal"
+        }
+      }
+    },
+    "NopConfigurationOptionModel": {
+      "type": "object",
+      "required": [
+        "id",
+        "groupOrder"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string"
+        },
+        "groupOrder": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NopConfigurationValueModel"
+          }
+        },
+        "selectedValue": {
+          "type": "string"
+        }
+      }
+    },
+    "NopConfigurationValueModel": {
+      "type": "object",
+      "required": [
+        "id",
+        "price",
+        "priceWithTax",
+        "fee",
+        "isPreselected",
+        "displayOrder"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "value": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "priceWithTax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "fee": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "isPreselected": {
+          "type": "boolean"
+        },
+        "displayOrder": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "NopOrderItemDetailsModel": {
+      "type": "object",
+      "required": [
+        "kuvaFixedResult",
+        "kuvaCategoryValue",
+        "kuvaCategoryResult",
+        "kuvaLiquidityResult",
+        "specialDeliveryResult",
+        "currencyCloudValue",
+        "currencyCloudResult",
+        "unitPrice",
+        "unitPriceLocalCurrency",
+        "priceInclFee",
+        "priceInclFeeLocalCurrency",
+        "feeTax",
+        "specialDeliveryTax",
+        "shippingType",
+        "rejectCount"
+      ],
+      "properties": {
+        "orderItemId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "kuvaFixedResult": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "kuvaCategoryValue": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "kuvaCategoryResult": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "kuvaLiquidityResult": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "specialDeliveryResult": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "currencyCloudValue": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "currencyCloudResult": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "unitPrice": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "unitPriceLocalCurrency": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "priceInclFee": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "priceInclFeeLocalCurrency": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "feeTax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "specialDeliveryTax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "shippingType": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "addressId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "rejectCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "configurationCost": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NopConfigurationCostModel"
+          }
+        }
+      }
+    },
+    "NopConfigurationCostModel": {
+      "type": "object",
+      "required": [
+        "id",
+        "price",
+        "priceWithTax",
+        "fee",
+        "currencyCloud",
+        "feeTax",
+        "currencyCloudTax",
+        "groupOrder",
+        "type",
+        "tax",
+        "totalPrice"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "title": {
+          "type": "string"
+        },
+        "selectedValueTitle": {
+          "type": "string"
+        },
+        "selectedValue": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "priceWithTax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "fee": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "currencyCloud": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "feeTax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "currencyCloudTax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "groupTitle": {
+          "type": "string"
+        },
+        "groupOrder": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "$ref": "#/definitions/ConfigurationOptionType"
+        },
+        "comboTitle": {
+          "type": "string"
+        },
+        "configurationTitle": {
+          "type": "string"
+        },
+        "tax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "totalPrice": {
+          "type": "number",
+          "format": "decimal"
+        }
+      }
+    },
+    "ConfigurationOptionType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Combo",
+        "Option",
+        "Note"
+      ],
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "NopProductModel": {
+      "type": "object",
+      "required": [
+        "units",
+        "isFreeShipping",
+        "isTaxExempt",
+        "orderMinimumQuantity",
+        "orderMaximumQuantity",
+        "price",
+        "tax",
+        "categoryId",
+        "shippingType",
+        "fee",
+        "opacity",
+        "published"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "name": {
+          "type": "string"
+        },
+        "shortName": {
+          "type": "string"
+        },
+        "units": {
+          "type": "number",
+          "format": "double"
+        },
+        "shortDescription": {
+          "type": "string"
+        },
+        "fullDescription": {
+          "type": "string"
+        },
+        "sku": {
+          "type": "string"
+        },
+        "isFreeShipping": {
+          "type": "boolean"
+        },
+        "isTaxExempt": {
+          "type": "boolean"
+        },
+        "stockQuantity": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "orderMinimumQuantity": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "orderMaximumQuantity": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "price": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "tax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "vendorId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "categoryId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "categoryName": {
+          "type": "string"
+        },
+        "shippingType": {
+          "$ref": "#/definitions/ShippingType"
+        },
+        "pickupAddressId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pickupAddressName": {
+          "type": "string"
+        },
+        "specialDeliveryValue": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "fee": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "color": {
+          "type": "string"
+        },
+        "opacity": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "published": {
+          "type": "boolean"
+        },
+        "configuration": {
+          "$ref": "#/definitions/NopProductConfigurationModel"
+        },
+        "pictureUrls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NopProductTagModel"
+          }
+        }
+      }
+    },
+    "NopProductTagModel": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "NopOrderModel": {
+      "type": "object",
+      "required": [
+        "addressId",
+        "status",
+        "isPaid",
+        "vendorsAmount",
+        "rate",
+        "orderAmount",
+        "cost",
+        "costInclFee",
+        "costInclFeeLocalCurrency",
+        "paidAmount",
+        "paidAmountLocalCurrency",
+        "paidAmountPaidCurrency",
+        "createdOrderPricePaidCurrency",
+        "paidToCoD",
+        "priceTax",
+        "feeTax",
+        "generalTax",
+        "generalTaxLocalCurrency",
+        "salesTaxLocalCurrency",
+        "salesTax",
+        "shippingCost",
+        "shippingCostLocalCurrency",
+        "shippingTax",
+        "orderedDateUtc",
+        "orderedDateLocalTime",
+        "isHaveDelivery",
+        "isDeliveryReady",
+        "isHavePickup",
+        "isPickupReady",
+        "isHaveSpecial",
+        "isSpecialReady",
+        "paymentType",
+        "paymentMethod",
+        "creditWalletChangeAmount",
+        "isViewed",
+        "paidAmountRealMoney",
+        "creditWalletAmount",
+        "creditWalletTransactionId"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "orderNumber": {
+          "type": "string"
+        },
+        "customerNumber": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "customerPhoneNumber": {
+          "type": "string"
+        },
+        "customerEmail": {
+          "type": "string"
+        },
+        "orderedBy": {
+          "type": "string"
+        },
+        "receiverName": {
+          "type": "string"
+        },
+        "receiverPhoneNumber": {
+          "type": "string"
+        },
+        "addressId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "address": {
+          "$ref": "#/definitions/CustomerAddressModel"
+        },
+        "subStatus": {
+          "$ref": "#/definitions/OrderSubStatus"
+        },
+        "locationId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "city": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/OrderStatus"
+        },
+        "isPaid": {
+          "type": "boolean"
+        },
+        "vendorsAmount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "rate": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "orderAmount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "cost": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "costInclFee": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "referenceNumber": {
+          "type": "string"
+        },
+        "costInclFeeLocalCurrency": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "paidAmount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "paidAmountLocalCurrency": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "paidAmountPaidCurrency": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "createdOrderPricePaidCurrency": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "paidToCoD": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "localCurrency": {
+          "type": "string"
+        },
+        "paidCurrency": {
+          "type": "string"
+        },
+        "shopCurrency": {
+          "type": "string"
+        },
+        "priceTax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "feeTax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "generalTax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "generalTaxLocalCurrency": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "salesTaxLocalCurrency": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "salesTax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "shippingCost": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "shippingCostLocalCurrency": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "shippingTax": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "orderedDateUtc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "orderedDateLocalTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "paidDateUtc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "paidDateLocalTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "expirationDateUtc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deliveryTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "topUpRequestId": {
+          "type": "string",
+          "format": "guid"
+        },
+        "isHaveDelivery": {
+          "type": "boolean"
+        },
+        "isDeliveryReady": {
+          "type": "boolean"
+        },
+        "isHavePickup": {
+          "type": "boolean"
+        },
+        "isPickupReady": {
+          "type": "boolean"
+        },
+        "isHaveSpecial": {
+          "type": "boolean"
+        },
+        "isSpecialReady": {
+          "type": "boolean"
+        },
+        "topUpRequestStatus": {
+          "$ref": "#/definitions/TopUpStatus"
+        },
+        "manualAmount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "paymentId": {
+          "type": "string"
+        },
+        "paymentType": {
+          "$ref": "#/definitions/StripePaymentTrackingType"
+        },
+        "paymentMethod": {
+          "$ref": "#/definitions/PaymentMethod"
+        },
+        "creditWalletChangeAmount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "additionalFees": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NopAdditionalFeesModel"
+          }
+        },
+        "agentFees": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "countryId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "refundInfo": {
+          "$ref": "#/definitions/RefundModel"
+        },
+        "refundInfoBO": {
+          "$ref": "#/definitions/OrderPaymentRefundDto"
+        },
+        "isViewed": {
+          "type": "boolean"
+        },
+        "paidAmountRealMoney": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "creditWalletAmount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "creditWalletCurrency": {
+          "type": "string"
+        },
+        "creditWalletTransactionId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "OrderSubStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "ReadyForPickup",
+        "PickedUp",
+        "Delivered"
+      ],
+      "enum": [
+        10,
+        20,
+        30
+      ]
+    },
+    "NopAdditionalFeesModel": {
+      "type": "object",
+      "required": [
+        "feeType"
+      ],
+      "properties": {
+        "feeType": {
+          "$ref": "#/definitions/KuvaLocalFeeType"
+        },
+        "result": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "value": {
+          "type": "number",
+          "format": "decimal"
+        }
+      }
+    },
+    "KuvaLocalFeeType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "AgentFixed",
+        "AgentPercent",
+        "CurrencyCloud",
+        "KuvaFixed",
+        "KuvaLiquidity",
+        "CategoryKuvaPercent",
+        "FreeShippingLimit",
+        "ShippingCost"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "RefundModel": {
+      "type": "object",
+      "required": [
+        "amount",
+        "refundType"
+      ],
+      "properties": {
+        "amount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "refundDetails": {
+          "type": "string"
+        },
+        "refundType": {
+          "$ref": "#/definitions/RefundType"
+        },
+        "userId": {
+          "type": "string",
+          "format": "guid"
+        }
+      }
+    },
+    "RefundType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "SWIFT",
+        "Kuvacash",
+        "Cash",
+        "Stripe",
+        "CreditWallet"
+      ],
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "OrderPaymentRefundDto": {
+      "type": "object",
+      "required": [
+        "createdDate",
+        "backOfficeUserId",
+        "refundAmount",
+        "type",
+        "status",
+        "amount",
+        "partialRefund"
+      ],
+      "properties": {
+        "nopOrderId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "backOfficeUserId": {
+          "type": "string",
+          "format": "guid"
+        },
+        "backOfficeUserEmail": {
+          "type": "string"
+        },
+        "refundAmount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "refundReason": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/RefundType"
+        },
+        "status": {
+          "$ref": "#/definitions/RefundStatus"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "refundCurrency": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "partialRefund": {
+          "type": "boolean"
+        }
+      }
+    },
+    "RefundStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "PendingProcessing",
+        "Processing",
+        "PaymentExpected",
+        "Completed",
+        "Rejected",
+        "RefundFailed"
+      ],
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "CheckoutOrderDetailsDTO": {
+      "type": "object",
+      "required": [
+        "id",
+        "paidAmount",
+        "paidAmountRealMoney",
+        "rate",
+        "fromAmount",
+        "totalFromAmount",
+        "toAmount",
+        "date",
+        "status",
+        "requestType"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "topUpRequestId": {
+          "type": "string",
+          "format": "guid"
+        },
+        "nopCommerceOrderId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "paidCurrency": {
+          "type": "string"
+        },
+        "paidAmount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "paidAmountRealMoney": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "creditWalletCurrency": {
+          "type": "string"
+        },
+        "agentFixedFee": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "agentPercentFee": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "kuvaFixedFee": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "kuvaPercentFee": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "rate": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "fromAmount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "totalFromAmount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "toAmount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "fromCurrency": {
+          "type": "string"
+        },
+        "toCurrency": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "$ref": "#/definitions/TopUpStatus"
+        },
+        "requestType": {
+          "$ref": "#/definitions/AddFundsType"
+        },
+        "agentInfo": {
+          "$ref": "#/definitions/AgentModelRecord"
+        },
+        "bankDetails": {
+          "$ref": "#/definitions/BankDetailsModel"
+        },
+        "expirationDateUtc": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "AgentModelRecord": {
+      "type": "object",
+      "required": [
+        "id",
+        "balanceUsd",
+        "availableBalanceUsd",
+        "lng",
+        "lat",
+        "blocked",
+        "canAgentEditProfile",
+        "onboardingFixedFee",
+        "limitAmountWarning",
+        "cashoutEnabled",
+        "isPendingGroupCashoutsVisible",
+        "isPastGroupCashoutsVisible",
+        "twoFactorEnabled",
+        "isShowUserDetailsEnabled",
+        "isPendingGroupCashOnDeliveryVisible",
+        "groupChangeMerchantTransactionsVisible"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "guid"
+        },
+        "fullName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "balanceUsd": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "availableBalanceUsd": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "country": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "zipCode": {
+          "type": "string"
+        },
+        "lng": {
+          "type": "number",
+          "format": "double"
+        },
+        "lat": {
+          "type": "number",
+          "format": "double"
+        },
+        "timeZoneId": {
+          "type": "string"
+        },
+        "blocked": {
+          "type": "boolean"
+        },
+        "canAgentEditProfile": {
+          "type": "boolean"
+        },
+        "onboardingFixedFee": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "changeMerchantFee": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "changeLimit": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "limitAmountWarning": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "agentGroupId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "agentGroupName": {
+          "type": "string"
+        },
+        "vendorId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "cashoutEnabled": {
+          "type": "boolean"
+        },
+        "isPendingGroupCashoutsVisible": {
+          "type": "boolean"
+        },
+        "isPastGroupCashoutsVisible": {
+          "type": "boolean"
+        },
+        "twoFactorEnabled": {
+          "type": "boolean"
+        },
+        "isShowUserDetailsEnabled": {
+          "type": "boolean"
+        },
+        "isPendingGroupCashOnDeliveryVisible": {
+          "type": "boolean"
+        },
+        "groupChangeMerchantTransactionsVisible": {
+          "type": "boolean"
+        }
+      }
+    },
+    "CreateOrderRequestDTO": {
+      "type": "object",
+      "required": [
+        "addressId",
+        "addressDeliveryType",
+        "paymentMethod",
+        "timeZoneSeconds"
+      ],
+      "properties": {
+        "locationId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "addressId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "addressDeliveryType": {
+          "$ref": "#/definitions/AddressDeliveryType"
+        },
+        "receiverName": {
+          "type": "string"
+        },
+        "paymentMethod": {
+          "$ref": "#/definitions/PaymentMethod"
+        },
+        "customerId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "timeZoneSeconds": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "AddressDeliveryType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Delivery",
+        "Pickup"
+      ],
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "KuvaLocalSaveOrderRequest": {
+      "type": "object",
+      "required": [
+        "addressId"
+      ],
+      "properties": {
+        "customerId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "locationId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "addressId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "KuvaLocalRefillOrderRequest": {
+      "type": "object",
+      "required": [
+        "overwrite"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "overwrite": {
+          "type": "boolean"
+        },
+        "customerId": {
+          "$ref": "#/definitions/GeoId"
+        }
+      }
+    },
+    "ChangePaymentMethodForOrder": {
+      "type": "object",
+      "required": [
+        "paymentMethod"
+      ],
+      "properties": {
+        "nopOrderId": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "paymentMethod": {
+          "$ref": "#/definitions/PaymentMethod"
+        }
+      }
+    },
+    "PayCodeRequestDTO": {
+      "type": "object",
+      "required": [
+        "amountUsd",
+        "expirationDate"
+      ],
+      "properties": {
+        "amountUsd": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "message": {
+          "type": "string"
+        },
+        "expirationDate": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "nopOrderId": {
+          "$ref": "#/definitions/GeoId"
+        }
+      }
+    },
+    "StripeIntendViewModel": {
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "$ref": "#/definitions/GeoId"
+        }
+      }
+    },
+    "StripeChargeViewModel": {
+      "type": "object",
+      "properties": {
+        "cardId": {
+          "type": "string"
+        },
+        "orderId": {
+          "$ref": "#/definitions/GeoId"
+        }
+      }
+    },
+    "ConfirmationLocalDTO": {
+      "type": "object",
+      "required": [
+        "code"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^\\d{6}$"
+        },
+        "smsTwilioType": {
+          "$ref": "#/definitions/SmsTwilioType"
+        },
+        "deviceId": {
+          "type": "string"
+        }
+      }
+    },
+    "PromoCodeModel": {
+      "type": "object",
+      "required": [
+        "code",
+        "codeType",
+        "discount",
+        "discountType",
+        "expirationDate"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "country": {
+          "$ref": "#/definitions/PromoCodeCountryDto"
+        },
+        "code": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1
+        },
+        "location": {
+          "$ref": "#/definitions/PromoCodeLocationDto"
+        },
+        "codeType": {
+          "$ref": "#/definitions/PromoCodeType"
+        },
+        "product": {
+          "$ref": "#/definitions/PromoCodeProductModel"
+        },
+        "category": {
+          "$ref": "#/definitions/PromoCodeCategoryModel"
+        },
+        "discount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "discountType": {
+          "$ref": "#/definitions/PromoDiscountType"
+        },
+        "expirationDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "usageCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "status": {
+          "$ref": "#/definitions/PromoCodeStatus"
+        }
+      }
+    },
+    "PromoCodeCountryDto": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PromoCodeLocationDto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PromoCodeType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Product",
+        "Category"
+      ],
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "PromoCodeProductModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PromoCodeCategoryModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/GeoId"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "PromoDiscountType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Currency",
+        "Percentage"
+      ],
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "PromoCodeStatus": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Draft",
+        "Active",
+        "Expired"
+      ],
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "PromoCodeDto": {
+      "type": "object",
+      "required": [
+        "codeType",
+        "discount",
+        "discountType"
+      ],
+      "properties": {
+        "country": {
+          "$ref": "#/definitions/PromoCodeCountryDto"
+        },
+        "code": {
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/definitions/PromoCodeLocationDto"
+        },
+        "codeType": {
+          "$ref": "#/definitions/PromoCodeType"
+        },
+        "product": {
+          "$ref": "#/definitions/PromoCodeProductDto"
+        },
+        "category": {
+          "$ref": "#/definitions/PromoCodeCategoryDto"
+        },
+        "discount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "discountType": {
+          "$ref": "#/definitions/PromoDiscountType"
+        }
+      }
+    },
+    "PromoCodeProductDto": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "PromoCodeCategoryDto": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "CartItemConfigurations": {
+      "type": "object",
+      "properties": {
+        "configurations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KuvaLocalShoppingCartItemConfiguration"
+          }
+        }
+      }
+    },
+    "KuvaLocalShoppingCartItemConfiguration": {
+      "type": "object",
+      "required": [
+        "productAttributeMappingId"
+      ],
+      "properties": {
+        "productAttributeMappingId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "productAttribyteValue": {
+          "type": "string"
+        }
+      }
+    },
+    "Destination": {
+      "type": "object",
+      "properties": {
+        "countryCode": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "entityType": {
+          "type": "string"
+        }
+      }
+    },
+    "BeneficiaryDetails": {
+      "type": "object",
+      "required": [
+        "paymentType",
+        "countryCode",
+        "currency",
+        "reference",
+        "alias"
+      ],
+      "properties": {
+        "paymentType": {
+          "$ref": "#/definitions/PaymentType"
+        },
+        "countryCode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "alias": {
+          "type": "string",
+          "minLength": 1
+        },
+        "clabe": {
+          "type": "string"
+        },
+        "branchCode": {
+          "type": "string"
+        },
+        "bankCode": {
+          "type": "string"
+        },
+        "institutionNo": {
+          "type": "string"
+        },
+        "bsbCode": {
+          "type": "string"
+        },
+        "iban": {
+          "type": "string"
+        },
+        "sortCode": {
+          "type": "string"
+        },
+        "aba": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "postcode": {
+          "type": "string"
+        },
+        "stateOrProvince": {
+          "type": "string"
+        },
+        "bicSwift": {
+          "type": "string"
+        },
+        "accountNumber": {
+          "type": "string"
+        },
+        "cnaps": {
+          "type": "string"
+        },
+        "ifsc": {
+          "type": "string"
+        },
+        "entityType": {
+          "type": "string"
+        },
+        "bankName": {
+          "type": "string"
+        },
+        "bankAddress": {
+          "type": "string"
+        },
+        "bankAccountType": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentType": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Regular",
+        "Priority"
+      ],
+      "enum": [
+        10,
+        20
+      ]
+    },
+    "TransferRequest": {
+      "type": "object",
+      "required": [
+        "beneficiaryId",
+        "destinationAmount",
+        "sourceCoin"
+      ],
+      "properties": {
+        "beneficiaryId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "destinationAmount": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "sourceCoin": {
+          "$ref": "#/definitions/CoinType"
+        }
+      }
+    },
+    "NewTransfer": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/TransferRequest"
+        },
+        {
+          "type": "object",
+          "required": [
+            "sourceAmount",
+            "sourceFee",
+            "rate"
+          ],
+          "properties": {
+            "sourceAmount": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "sourceFee": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "rate": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "reference": {
+              "type": "string"
+            },
+            "fees": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "securityDefinitions": {
+    "JWT": {
+      "type": "apiKey",
+      "description": "Type into the textbox: Bearer {your JWT token}.",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "tags": [
+    {
+      "name": "Mobile/Account"
+    },
+    {
+      "name": "Mobile/OutboundTransfer"
+    },
+    {
+      "name": "Mobile/Transactions"
+    }
+  ]
+}
